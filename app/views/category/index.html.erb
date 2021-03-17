@@ -1,0 +1,8 @@
+<h1>Category#read</h1>
+<p>Find me in app/views/category/read.html.erb</p>
+<% @categories.each do |category|%>
+    <%= category.name %>
+    
+    <td><%= link_to 'Editar', edit_category_path(category) %></td>
+    <td><%= link_to 'Deletar', category_path(category), method: :delete, data: {confirm: 'Deletar produto?'} %></td>
+<% end %>
